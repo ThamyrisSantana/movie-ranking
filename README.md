@@ -21,14 +21,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Variáveis de ambiente:
 
-- New York Times: NEXT_PUBLIC_API_KEY_NYT 
-- The Movie DB: NEXT_PUBLIC_API_KEY_MOVIEDB 
-- OMDB: NEXT_PUBLIC_API_KEY_OMDB 
+- `NEXT_PUBLIC_API_KEY_NYT`: New York Times
+- `NEXT_PUBLIC_API_KEY_MOVIEDB`: The Movie DB
+- `NEXT_PUBLIC_API_KEY_OMDB`: OMDB
 
 
 ### Rodando o projeto
 
-Utilize yarn para instalar o projeto e yarn dev para rodar
+Utilize `yarn` para instalar o projeto e `yarn dev` para rodar
 
 ## Imagens de preview
 
