@@ -21,9 +21,9 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Variáveis de ambiente:
 
-- `NEXT_PUBLIC_API_KEY_NYT`: New York Times
-- `NEXT_PUBLIC_API_KEY_MOVIEDB`: The Movie DB
-- `NEXT_PUBLIC_API_KEY_OMDB`: OMDB
+- `NEXT_PUBLIC_API_KEY_NYT`: Api key do New York Times
+- `NEXT_PUBLIC_API_KEY_MOVIEDB`:  Api key do The Movie DB
+- `NEXT_PUBLIC_API_KEY_OMDB`: Api key do OMDB
 
 
 ### Rodando o projeto
