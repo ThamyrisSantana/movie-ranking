@@ -24,8 +24,6 @@ export default function MovieDetails() {
     }
   }, [title]);
 
-  // console.log(movieReview.results);
-
   useEffect(() => {
     async function loadData() {
       try {
@@ -45,8 +43,6 @@ export default function MovieDetails() {
       loadData();
     }
   }, [title]);
-
-  console.log(movieData, status);
 
   if (status === "loading" || status === "idle") {
     return (
