@@ -1,15 +1,39 @@
-import { movieDb } from "./api-setting";
+import { movieDbApi, omdbApi, nyTimesApi } from "./api-setting";
 
 export const getMovieDb = async (page = 1) => {
-  const req = await movieDb.get("/discover/movie", {
+  const res = await movieDbApi.get("/discover/movie", {
     params: {
-      api_key: process.env.NEXT_PUBLIC_API_KEY,
+      api_key: process.env.NEXT_PUBLIC_API_KEY_MOVIEDB,
       language: "pt-BR",
       page: page,
       sort_by: "vote_average.desc",
       primary_release_year: 2021,
-      "vote_count.gte": 1000,
+      "vote_count.gte": 200,
     },
   });
-  return req.data;
+  return res.data;
+};
+
+export const getOmdb = async (title) => {
+  const res = await omdbApi.get("/", {
+    params: {
+      apikey: process.env.NEXT_PUBLIC_API_KEY_OMDB,
+      t: title,
+      plot: "full",
+    },
+  });
+
+  return res.data;
+};
+
+export const getnyTimes = async (title) => {
+  const res = await nyTimesApi.get("/reviews/search.json", {
+    params: {
+      "api-key": process.env.NEXT_PUBLIC_API_KEY_NYT,
+      query: title,
+      "opening-date": "2021-01-01:2021-12-31",
+    },
+  });
+
+  return res.data;
 };
