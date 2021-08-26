@@ -28,7 +28,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Rodando o projeto
 
-Utilize yan para instalar o projeto e yarn dev para rodar
+Utilize yarn para instalar o projeto e yarn dev para rodar
 
 ## Imagens de preview
 
