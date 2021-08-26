@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 
 import { getMovieDb } from "../services/api-request";
@@ -37,6 +38,9 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Ranking Page</title>
+      </Head>
       <ol start={(page - 1) * 20 + 1} className={styles.ol}>
         {movieList.results?.map((movie) => {
           return (
