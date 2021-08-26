@@ -2,6 +2,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { getOmdb, getnyTimes } from "../services/api-request";
+import Head from "next/head";
 
 import styles from ".././styles/Movie-detals.module.scss";
 import { HiArrowCircleLeft } from "react-icons/hi";
@@ -9,15 +10,28 @@ import { HiArrowCircleLeft } from "react-icons/hi";
 export default function MovieDetails() {
   const [movieData, setMovieData] = useState({});
   const [status, setStatus] = useState("idle");
+  const [reviewStatus, setReviewStatus] = useState("idle");
   const [movieReview, setmovieReview] = useState({});
 
   const router = useRouter();
   const title = router.query.title;
 
+  console.log(movieReview);
+
   useEffect(() => {
     async function loadReview() {
-      const review = await getnyTimes(title);
-      setmovieReview(review);
+      try {
+        setReviewStatus("loading");
+        const review = await getnyTimes(title);
+        if (review.results === null) {
+          setReviewStatus("error");
+        } else {
+          setmovieReview(review);
+          setReviewStatus("success");
+        }
+      } catch (error) {
+        setReviewStatus("error");
+      }
     }
     if (title) {
       loadReview();
@@ -62,6 +76,9 @@ export default function MovieDetails() {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>{movieData.Title}</title>
+      </Head>
       <main className={styles.movieInfos}>
         <div className={styles.moviePosterContainer}>
           <img
@@ -74,8 +91,14 @@ export default function MovieDetails() {
         <div className={styles.movieDeatlsContainer}>
           <h2 className={styles.movieTitle}> {movieData.Title}</h2>
           <div className={styles.movieDetals}>
-            <p className={styles.movieDirector}>{movieData.Director}</p>
-            <p className={styles.movieGenre}>{movieData.Genre}</p>
+            <p className={styles.movieDirector}>
+              <strong>Director: </strong>
+              {movieData.Director}
+            </p>
+            <p className={styles.movieGenre}>
+              <strong>Genre: </strong>
+              {movieData.Genre}
+            </p>
           </div>
           <p className={styles.movieDescripstion}>{movieData.Plot}</p>
         </div>
@@ -92,32 +115,36 @@ export default function MovieDetails() {
         })}
       </section>
 
-      <section className={styles.movieReviewContainer}>
-        <h1>Crítica por NewYork Times:</h1>
-        {movieReview?.results?.map((review) => {
-          return (
-            <div className={styles.reviewInfos} key={review.headline}>
-              <div>
-                <h3 className={styles.reviewTitle}>{review.headline}</h3>
-                <p className={styles.reviewSummary}>{review.summary_short}</p>
-                <a
-                  className={styles.reviewLink}
-                  href={review.link.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Ver review completo
-                </a>
+      {reviewStatus === "loading" && <h2>Loading</h2>}
+      {reviewStatus === "error" && <h2>Movie doesnt have a review</h2>}
+      {reviewStatus === "success" && (
+        <section className={styles.movieReviewContainer}>
+          <h1>Review by NewYork Times:</h1>
+          {movieReview?.results?.map((review) => {
+            return (
+              <div className={styles.reviewInfos} key={review.headline}>
+                <div className={styles.reviewInfosContainer}>
+                  <h3 className={styles.reviewTitle}>{review.headline}</h3>
+                  <p className={styles.reviewSummary}>{review.summary_short}</p>
+                  <a
+                    className={styles.reviewLink}
+                    href={review.link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Read more
+                  </a>
+                </div>
+                <img
+                  className={styles.reviewImage}
+                  src={review.multimedia.src}
+                  alt=""
+                />
               </div>
-              <img
-                className={styles.reviewImage}
-                src={review.multimedia.src}
-                alt=""
-              />
-            </div>
-          );
-        })}
-      </section>
+            );
+          })}
+        </section>
+      )}
     </div>
   );
 }
