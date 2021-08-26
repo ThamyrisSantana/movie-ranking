@@ -1,34 +1,38 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Raking de filmes
 
-First, run the development server:
+## Tecnologias
+ 
+ <div style="display: inline_block"><br>
+  <img align="center" alt="Js" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+  <img align="center" alt="Js" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg">
+  <img align="center" alt="Js" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg">
+</div>
+ 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Apis Utilizadas 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [NY Times](https://developer.nytimes.com/docs/movie-reviews-api/1/overview) - Api utilizada para review
+- [The Movie DB](https://developers.themoviedb.org/3/getting-started/introduction) - Api utilizada para ranquear os filmes
+- [OMDB](http://www.omdbapi.com/) - Api utilizada na tela de detalhes do filme 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+⚠️  É necessaário que o requerimento da apikey seja feito para execução do projeto.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Variáveis de ambiente:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- New York Times: NEXT_PUBLIC_API_KEY_NYT 
+- The Movie DB: NEXT_PUBLIC_API_KEY_MOVIEDB 
+- OMDB: NEXT_PUBLIC_API_KEY_OMDB 
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Rodando o projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Utilize yan para instalar o projeto e yarn dev para rodar
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Imagens de preview
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Tela de listagem 1](https://cdn.discordapp.com/attachments/877998509066948618/880447463096471613/Captura_de_tela_de_2021-08-26_09-24-20.png) 
+![Tela de listagem 2](https://cdn.discordapp.com/attachments/877998509066948618/880447454049361992/Captura_de_tela_de_2021-08-26_09-24-26.png)
+![Tela de detalhes 1](https://cdn.discordapp.com/attachments/877998509066948618/880441161809023046/Captura_de_tela_de_2021-08-26_09-25-31.png)
+![Tela de detalhes 2](https://cdn.discordapp.com/attachments/877998509066948618/880441165009281094/Captura_de_tela_de_2021-08-26_09-25-42.png)
