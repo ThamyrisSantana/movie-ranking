@@ -17,8 +17,6 @@ export default function MovieDetails() {
   const router = useRouter();
   const title = router.query.title;
 
-  console.log(movieReview);
-
   useEffect(() => {
     async function loadReview() {
       try {
@@ -61,7 +59,7 @@ export default function MovieDetails() {
 
   if (status === "loading" || status === "idle") {
     return (
-      <div className={styles.message}>
+      <div className={styles.container}>
         <h2>Loading...</h2>
       </div>
     );
@@ -113,14 +111,18 @@ export default function MovieDetails() {
       </main>
 
       <section className={styles.movieRating}>
-        {movieData?.Ratings?.map((votes) => {
-          return (
-            <div key={votes.Source}>
-              <h2>{votes.Source}</h2>
-              <p>{votes.Value}</p>
-            </div>
-          );
-        })}
+        {movieData.Ratings.length === 0 ? (
+          <h2>Ratings not available</h2>
+        ) : (
+          movieData?.Ratings?.map((votes) => {
+            return (
+              <div key={votes.Source}>
+                <h2>{votes.Source}</h2>
+                <p>{votes.Value}</p>
+              </div>
+            );
+          })
+        )}
       </section>
 
       {reviewStatus === "loading" && <h2>Loading</h2>}
