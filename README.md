@@ -1,3 +1,6 @@
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # Raking de filmes
@@ -31,6 +34,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Utilize `yarn` para instalar o projeto e `yarn dev` para rodar
 
 ## Imagens de preview
+
+https://user-images.githubusercontent.com/73114457/132141980-868adf2a-61c2-4b42-a81d-8ab06a609660.mp4
 
 ![Tela de listagem 1](https://cdn.discordapp.com/attachments/877998509066948618/880447463096471613/Captura_de_tela_de_2021-08-26_09-24-20.png) 
 ![Tela de listagem 2](https://cdn.discordapp.com/attachments/877998509066948618/880447454049361992/Captura_de_tela_de_2021-08-26_09-24-26.png)
