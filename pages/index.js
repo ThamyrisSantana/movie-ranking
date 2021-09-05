@@ -34,8 +34,6 @@ export default function Home() {
     setPage(page - 1);
   };
 
-  console.log(movieList);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -63,7 +61,7 @@ export default function Home() {
           );
         })}
       </ol>
-      <footer className={styles.footer}>
+      <div className={styles.changePageButton}>
         <Button
           onClick={getPreviousPage}
           disabled={page === 1}
@@ -74,7 +72,7 @@ export default function Home() {
           disabled={movieList.total_pages === page}
           text={<HiChevronRight />}
         />
-      </footer>
+      </div>
     </div>
   );
 }
