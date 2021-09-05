@@ -12,6 +12,20 @@
   align-items: center;
   justify-content: center;
 
+  .header {
+    width: 100%;
+
+    .backBtn {
+      background-color: #edeef7;
+      position: fixed;
+      font-size: 3.5rem;
+      margin-left: 2rem;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #ffd900;
+    }
+  }
+
   .movieInfos {
     display: flex;
     align-items: center;
