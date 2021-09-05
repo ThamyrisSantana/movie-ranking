@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRouter } from "next/router";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { getOmdb, getnyTimes } from "../services/api-request";
 import Head from "next/head";
@@ -79,6 +80,13 @@ export default function MovieDetails() {
       <Head>
         <title>{movieData.Title}</title>
       </Head>
+      <header className={styles.header}>
+        <Link href={"./"}>
+          <a className={styles.a}>
+            <HiArrowCircleLeft className={styles.backBtn} />
+          </a>
+        </Link>
+      </header>
       <main className={styles.movieInfos}>
         <div className={styles.moviePosterContainer}>
           <img
