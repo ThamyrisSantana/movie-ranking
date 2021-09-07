@@ -1,0 +1,33 @@
+.input {
+  width: 12rem;
+  height: 2.5rem;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgb(134, 134, 134);
+
+  background-color: #fdfdfd;
+  border: 1px solid rgba(134, 134, 134, 0.26);
+  border-radius: 3px;
+
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  padding-left: 0.7rem;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:focus {
+    box-shadow: 7px 7px 14px -5px #c4c5c7;
+    border: 1px solid #c5ccdb;
+
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgb(184, 182, 182);
+    font-weight: 560;
+  }
+}
