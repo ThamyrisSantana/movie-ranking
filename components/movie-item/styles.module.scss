@@ -1,0 +1,40 @@
+.movieContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .li {
+    font-weight: 500;
+    font-size: 1.3rem;
+
+    .movieTitle {
+      color: #484747;
+    }
+  }
+  .vote {
+    font-size: 1.1rem;
+    width: 5rem;
+    height: 3rem;
+    color: #484747;
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+
+    .HiStar {
+      color: #ffe13b;
+      align-self: center;
+    }
+  }
+
+  .movieTitle:hover {
+    color: #ffb442;
+  }
+
+  .changePageButton {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
