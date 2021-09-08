@@ -1,33 +1,48 @@
-.input {
-  width: 12rem;
-  height: 2.5rem;
+.container {
+  display: flex;
+  flex-direction: column;
 
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: rgb(134, 134, 134);
+  .input {
+    width: 13rem;
+    height: 2.5rem;
 
-  background-color: #fdfdfd;
-  border: 1px solid rgba(134, 134, 134, 0.26);
-  border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgb(134, 134, 134);
 
-  font-size: 0.9rem;
-  margin-right: 1rem;
-  padding-left: 0.7rem;
+    background-color: #fdfdfd;
+    border: 1px solid rgba(134, 134, 134, 0.26);
+    border-radius: 5px;
 
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+    font-size: 0.9rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    padding-left: 0.7rem;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    &:focus {
+      background-color: #fff;
+      box-shadow: 7px 7px 14px -5px #d0d0d1;
+      border: 1px solid #c5ccdb;
+
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgb(184, 182, 182);
+      font-weight: 560;
+    }
   }
 
-  &:focus {
-    box-shadow: 7px 7px 14px -5px #c4c5c7;
-    border: 1px solid #c5ccdb;
+  label {
+    color: rgb(134, 134, 134);
+    font-weight: 500;
+    font-size: 0.8rem;
 
-    outline: none;
-  }
-
-  &::placeholder {
-    color: rgb(184, 182, 182);
-    font-weight: 560;
+    margin-bottom: 0rem;
   }
 }
