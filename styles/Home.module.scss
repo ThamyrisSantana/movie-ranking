@@ -7,6 +7,62 @@
   align-items: center;
   justify-content: center;
 
+  .filterButtonContainer {
+    width: 42rem;
+    margin-bottom: 1rem;
+
+    button {
+      width: 7rem;
+      padding: 1rem;
+      display: flex;
+
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgb(134, 134, 134);
+
+      background-color: #fafafa;
+      border: none;
+      border-radius: 5px;
+
+      font-size: 0.9rem;
+      cursor: pointer;
+
+      .icon {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .filterButtonContainerOff {
+    width: 42rem;
+    margin-bottom: 1rem;
+
+    button {
+      width: 7rem;
+      padding: 1rem;
+      display: flex;
+
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: rgb(134, 134, 134);
+
+      background-color: #fff;
+      box-shadow: 7px 7px 12px -5px #e1e2e6;
+      border: none;
+      border-radius: 5px;
+
+      font-size: 0.9rem;
+
+      cursor: pointer;
+
+      .icon {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
   .filters {
     width: 100%;
 
@@ -14,10 +70,10 @@
     align-items: center;
     justify-content: center;
 
-    margin: 2rem 0;
+    margin: 1rem 0;
 
     .select {
-      width: calc(12rem - scrollbar);
+      width: 14rem;
       height: 2.5rem;
 
       font-size: 0.8rem;
@@ -26,11 +82,12 @@
 
       background-color: #fdfdfd;
       border: 1px solid rgba(134, 134, 134, 0.26);
-      border-radius: 3px;
+      border-radius: 5px;
 
       font-size: 0.9rem;
       padding: 0 1rem;
 
+      cursor: pointer;
       &:focus {
         box-shadow: 7px 7px 14px -5px #c4c5c7;
         outline: none;
@@ -41,11 +98,14 @@
       }
     }
   }
-}
 
-// .selecBox {
-//   width: 50%;
-// }
+  .filterButtons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .ol {
   padding: 1.3rem 1.3rem 1.3rem 4rem;
