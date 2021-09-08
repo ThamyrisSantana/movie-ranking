@@ -77,6 +77,7 @@ export default function MovieDetails() {
     <div className={styles.container}>
       <Head>
         <title>{movieData.Title}</title>
+        <link rel="shortcut icon" href="/trophy.png" />
       </Head>
       <header className={styles.header}>
         <Link href={"./"}>
