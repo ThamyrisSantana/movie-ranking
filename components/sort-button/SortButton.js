@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import toast, { Toaster } from "react-hot-toast";
 
-const FilterButton = (props) => {
+const SortButton = (props) => {
   function setInfos(e) {
     props.setButtonFilter(e.target.value);
 
@@ -23,4 +23,4 @@ const FilterButton = (props) => {
   );
 };
 
-export default FilterButton;
+export default SortButton;
