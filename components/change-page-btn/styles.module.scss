@@ -1,0 +1,22 @@
+.button {
+  width: 4rem;
+
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 500;
+
+  margin: 2rem 1rem;
+  padding: 8px;
+  border: none;
+
+  background-color: #ffd500;
+  color: #333;
+
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:disabled {
+    cursor: not-allowed;
+    filter: brightness(0.9);
+  }
+}
