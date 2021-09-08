@@ -11,6 +11,7 @@ import { MdModeEdit } from "react-icons/md";
 import Button from "../components/change-page-btn/ChangePageBtn";
 import Input from "../components/input-filter/InputFilter";
 import MovieList from "../components/movie-item/MovieItem";
+import SortButton from "../components/sort-button/SortButton";
 
 export default function Home() {
   const [page, setPage] = useState(1);
@@ -19,6 +20,7 @@ export default function Home() {
   const [movieYear, setMovieYear] = useState(undefined);
   const [movieGenre, setMovieGenre] = useState("");
   const [showFilters, setShowFilters] = useState(false);
+  const [sortMoviesBy, setSortMoviesBy] = useState("");
 
   useEffect(() => {
     const getData = async () => {
@@ -108,6 +110,28 @@ export default function Home() {
                 <option value="37">Western</option>
               </optgroup>
             </select>
+          </div>
+          <div className={styles.filterButtons}>
+            <SortButton
+              buttonValue="vote_average.desc"
+              setButtonFilter={setSortMoviesBy}
+              filterName="Vote Average.desc"
+            />
+            <SortButton
+              buttonValue="vote_average.asc"
+              setButtonFilter={setSortMoviesBy}
+              filterName="Vote Average.asc"
+            />
+            <SortButton
+              buttonValue="popularity.desc"
+              setButtonFilter={setSortMoviesBy}
+              filterName="Popularity.Desc"
+            />
+            <SortButton
+              buttonValue="popularity.asc"
+              setButtonFilter={setSortMoviesBy}
+              filterName="Popularity.asc"
+            />
           </div>
         </>
       ) : null}
