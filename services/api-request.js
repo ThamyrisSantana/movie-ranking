@@ -2,16 +2,17 @@ import { movieDbApi, omdbApi, nyTimesApi } from "./api-setting";
 
 export const getMovieDb = async (
   page = 1,
-  vote_count = 200,
+  vote_count = 500,
   year = 2021,
-  genre
+  genre,
+  sortBy = "vote_average.desc"
 ) => {
   const res = await movieDbApi.get("/discover/movie", {
     params: {
       api_key: process.env.NEXT_PUBLIC_API_KEY_MOVIEDB,
       language: "pt-BR",
       page: page,
-      sort_by: "vote_average.desc",
+      sort_by: sortBy,
       primary_release_year: year,
       "vote_count.gte": vote_count,
       with_genres: genre,
