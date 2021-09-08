@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./styles.module.scss";
 
-export default function Input(props) {
+export default function InputFilter(props) {
   return (
     <div>
       <input
