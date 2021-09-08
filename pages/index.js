@@ -56,6 +56,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Ranking Page</title>
+        <link rel="shortcut icon" href="/trophy.png" />
       </Head>
       <div
         className={
