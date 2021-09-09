@@ -11,6 +11,8 @@
     width: 42rem;
     margin-bottom: 1rem;
 
+    border-left: 3px solid #ffe13b;
+
     button {
       width: 7rem;
       padding: 1rem;
@@ -98,6 +100,8 @@
 }
 
 .ol {
+  width: 42rem;
+
   padding: 1.3rem 1.3rem 1.3rem 4rem;
   background-color: #fff;
   box-shadow: 5px 5px 20px rgba(148, 148, 148, 0.25);
