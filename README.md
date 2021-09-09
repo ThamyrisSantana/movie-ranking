@@ -12,6 +12,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
   <img align="center" alt="Next" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg">
   <img align="center" alt="Saad" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg">
 </div>
+
+
+## Pacotes
+
+- `react-hot-toast`: Disponibiliza toasts customizáveis - [link](https://react-hot-toast.com/)
+-  `react-select`: Disponibiliza selects mais flexíveis - [link](https://react-select.com/home)
  
 
 ## Apis Utilizadas 
@@ -35,9 +41,16 @@ Utilize `yarn` para instalar o projeto e `yarn dev` para rodar
 
 ## Imagens de preview
 
-https://user-images.githubusercontent.com/73114457/132141980-868adf2a-61c2-4b42-a81d-8ab06a609660.mp4
 
-![Tela de listagem 1](https://cdn.discordapp.com/attachments/877998509066948618/880447463096471613/Captura_de_tela_de_2021-08-26_09-24-20.png) 
-![Tela de listagem 2](https://cdn.discordapp.com/attachments/877998509066948618/880447454049361992/Captura_de_tela_de_2021-08-26_09-24-26.png)
+
+https://user-images.githubusercontent.com/73114457/132774486-edc09ece-fb95-493b-9f3f-14db18c71fa3.mp4
+
+
+![Tela de ranquiamento 1](https://user-images.githubusercontent.com/73114457/132774457-06a635e4-d8f3-4efc-ada6-c9f29d5d9bba.png)
+![Tela de ranquiamento 2](https://user-images.githubusercontent.com/73114457/132774577-f22e410d-462c-4279-80f6-158fec6806d9.png)
+
+![Tela de ranquiamento 3](https://user-images.githubusercontent.com/73114457/132774403-1cb93832-c7e3-468b-86bf-a192a757c375.png)
+![Tela de ranquiamento 4](https://user-images.githubusercontent.com/73114457/132774476-b647cabe-519e-4708-8579-8a76430602bc.png)
+
 ![Tela de detalhes 1](https://cdn.discordapp.com/attachments/877998509066948618/880441161809023046/Captura_de_tela_de_2021-08-26_09-25-31.png)
 ![Tela de detalhes 2](https://cdn.discordapp.com/attachments/877998509066948618/880441165009281094/Captura_de_tela_de_2021-08-26_09-25-42.png)
