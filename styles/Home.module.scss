@@ -64,37 +64,27 @@
   }
 
   .filters {
-    width: 100%;
+    width: 42rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin: 1rem 0;
+    margin: 1rem;
+    margin-bottom: 2rem;
 
-    .select {
-      width: 14rem;
-      height: 2.5rem;
+    .selectContainer {
+      width: 13rem;
 
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: rgb(134, 134, 134);
+      display: flex;
+      flex-direction: column;
 
-      background-color: #fdfdfd;
-      border: 1px solid rgba(134, 134, 134, 0.26);
-      border-radius: 5px;
+      label {
+        color: rgb(134, 134, 134);
+        font-weight: 500;
+        font-size: 0.8rem;
 
-      font-size: 0.9rem;
-      padding: 0 1rem;
-
-      cursor: pointer;
-      &:focus {
-        box-shadow: 7px 7px 14px -5px #c4c5c7;
-        outline: none;
-      }
-
-      optgroup {
-        font-size: 1rem;
+        margin-bottom: 0.2rem;
       }
     }
   }
