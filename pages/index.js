@@ -12,6 +12,7 @@ import Button from "../components/change-page-btn/ChangePageBtn";
 import Input from "../components/input-filter/InputFilter";
 import MovieList from "../components/movie-item/MovieItem";
 import SortButton from "../components/sort-button/SortButton";
+import Select from "../components/Select/Select";
 
 export default function Home() {
   const [page, setPage] = useState(1);
@@ -85,38 +86,15 @@ export default function Home() {
               setValue={setVoteCount}
             />
             <Input
+              className={styles.InputGap}
               placeholder="Year"
               value={movieYear}
               setValue={setMovieYear}
             />
-
-            <select
-              className={styles.select}
-              onChange={(e) => setMovieGenre(e.target.value)}
-            >
-              <optgroup>
-                <option value="">Choose an option</option>
-                <option value="28">Action</option>
-                <option value="12">Adventure</option>
-                <option value="16">Animation</option>
-                <option value="35">Comedy</option>
-                <option value="80">Crime</option>
-                <option value="99">Documentary</option>
-                <option value="18">Drama</option>
-                <option value="10751">Family</option>
-                <option value="14">Fantasy</option>
-                <option value="36">History</option>
-                <option value="27">Horror</option>
-                <option value="10402">Music</option>
-                <option value="9648">Mystery</option>
-                <option value="10749">Romance</option>
-                <option value="878">Science Fiction</option>
-                <option value="10770">TV Movie</option>
-                <option value="53">Thriller</option>
-                <option value="10752">War</option>
-                <option value="37">Western</option>
-              </optgroup>
-            </select>
+            <div className={styles.selectContainer}>
+              <label htmlFor="Select">Genre</label>
+              <Select onChange={setMovieGenre} value={movieGenre} />
+            </div>
           </div>
           <div className={styles.filterButtons}>
             <SortButton
