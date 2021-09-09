@@ -24,11 +24,17 @@ export default function Home() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await getMovieDb(page, voteCount, movieYear, movieGenre);
+      const data = await getMovieDb(
+        page,
+        voteCount,
+        movieYear,
+        movieGenre,
+        sortMoviesBy
+      );
       setMovieList(data);
     };
     getData();
-  }, [page, voteCount, movieYear, movieGenre]);
+  }, [page, voteCount, movieYear, movieGenre, sortMoviesBy]);
 
   function menuToggle() {
     if (showFilters === false) {
