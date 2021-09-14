@@ -10,7 +10,6 @@ const customStyles = {
     ...provided,
     backgroundColor: state.isSelected ? "#faca05" : "white",
     color: state.isSelected ? "#fff" : "rgb(134, 134, 134)",
-    cursor: "pointer",
     fontWeight: 500,
     paddingLeft: 15,
     ":hover": {
